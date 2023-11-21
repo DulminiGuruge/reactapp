@@ -1,6 +1,6 @@
 function AboutMe() {
     return (
-        <h1>About AboutLittleLemon</h1>
+        <h1>About page</h1>
     )
 }
 
