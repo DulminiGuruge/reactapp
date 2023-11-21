@@ -1,16 +1,27 @@
 
 import './App.css';
+import HomePage from "./components/HomePage"
+import AboutMe from "./components/AboutMe"
+import {Routes,Route,Link } from 'react-router-dom';
 
 function Heading() { 
   return ( 
-    <h1>This is an h1 heading.</h1> 
+    <h2>Hello</h2> 
   ) 
 } 
 
 function App() { 
   return ( 
     <div className="App"> 
-      This is the starting code for "Your first component" ungraded lab 
+    <nav className="nav">
+      <Link to="/" className="nav-item">Home page</Link>
+      <Link to="/about-me" className ="nav-item">About Me</Link>
+    </nav>
+    <Routes>
+      <Route path = "/" element={<HomePage/>}></Route>
+      <Route path="/about-me" element={<AboutMe/>}></Route>
+    </Routes>
+      
       <Heading /> 
     </div> 
   ); 
